@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Test Results
-          path: .sw/test/results.xml
+          path: results.xml
                
   publish-test-results:
     name: "Publish Unit Tests Results"
