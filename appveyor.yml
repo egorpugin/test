@@ -15,7 +15,9 @@ configuration:
 
 build_script:
   - echo 123
+  - exit 1
 
+after_build:
   -
     ps: $wc = New-Object 'System.Net.WebClient'
   -
