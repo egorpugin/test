@@ -17,7 +17,7 @@ build_script:
   - echo 123
   - exit 1
 
-after_test:
+on_finish:
   -
     ps: $wc = New-Object 'System.Net.WebClient'
   -
