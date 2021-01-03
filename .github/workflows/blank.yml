@@ -37,7 +37,7 @@ jobs:
           path: results.xml
                               
       - name: Unit Test Results 111
-        uses: docker://ghcr.io/enricomi/publish-unit-test-result-action:latest
+        uses: EnricoMi/publish-unit-test-result-action@v1.6
         if: always()
         with:
           check_name: Unit Test Results
