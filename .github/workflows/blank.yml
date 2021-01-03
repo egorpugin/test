@@ -37,7 +37,7 @@ jobs:
           path: results.xml
                               
       - name: Unit Test Results 111
-        uses: docker://ghcr.io/enricomi/publish-unit-test-result-action:latest
+        uses: EnricoMi/publish-unit-test-result-action@v1.6
         if: always()
         with:
           check_name: Unit Test Results
@@ -47,22 +47,3 @@ jobs:
           deduplicate_classes_by_file_name: false
           log_level: DEBUG
                 
-  publish-test-results:
-    name: "Publish Unit Tests Results"
-    needs: build
-    runs-on: ubuntu-latest
-    # the build-and-test job might be skipped, we don't need to run this job then
-    if: success() || failure()
-       
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          path: artifacts
-
-      - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1.6
-        with:
-          check_name: Unit Test Results
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          files: results.xml
