@@ -40,7 +40,7 @@ jobs:
           path: results.xml
           
           
-      - name: Publish Test Report 123
+      - name: Publish Test Report ${{ matrix.os }}
         if: always()
         uses: mikepenz/action-junit-report@v1
         with:
