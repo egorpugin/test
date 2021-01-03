@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="25" failures="10" disabled="1" errors="0" time="1,097" timestamp="2021-01-03T14:22:44" name="AllTests">
-  <testsuite name="StringRendererTest" tests="17" failures="10" disabled="1" errors="0" time="0,922" timestamp="2021-01-03T14:22:44">
-    <testcase name="DoesRenderToImage" status="run" result="completed" time="0,465" timestamp="2021-01-03T14:22:44" classname="StringRendererTest" />
-    <testcase name="DoesRenderToImageWithUnderline" status="run" result="completed" time="0,012" timestamp="2021-01-03T14:22:45" classname="StringRendererTest" />
-    <testcase name="DoesHandleNewlineCharacters" status="run" result="completed" time="0,013" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+<testsuites tests="25" failures="10" disabled="1" errors="0" time="0.468" timestamp="2021-01-03T14:23:37" name="AllTests">
+  <testsuite name="StringRendererTest" tests="17" failures="10" disabled="1" errors="0" time="0.383" timestamp="2021-01-03T14:23:37">
+    <testcase name="DoesRenderToImage" status="run" result="completed" time="0.231" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesRenderToImageWithUnderline" status="run" result="completed" time="0.014" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesHandleNewlineCharacters" status="run" result="completed" time="0.006" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:168&#x0A;Expected equality of these values:&#x0A;  7&#x0A;  boxchars.size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:168
 Expected equality of these values:
   7
   boxchars.size()
     Which is: 1]]></failure>
     </testcase>
-    <testcase name="DoesRenderLigatures" status="run" result="completed" time="0,033" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRenderLigatures" status="run" result="completed" time="0.011" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:191&#x0A;Value of: boxes[0]-&gt;box() != nullptr&#x0A;  Actual: false&#x0A;Expected: true" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:191
 Value of: boxes[0]->box() != nullptr
   Actual: false
@@ -23,7 +23,7 @@ Expected equality of these values:
   boxes[0]->ch().c_str()
     Which is: " "]]></failure>
     </testcase>
-    <testcase name="ArabicBoxcharsInLTROrder" status="run" result="completed" time="0,041" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="ArabicBoxcharsInLTROrder" status="run" result="completed" time="0.009" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:220&#x0A;Value of: boxes_str.empty()&#x0A;  Actual: true&#x0A;Expected: false" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:220
 Value of: boxes_str.empty()
   Actual: true
@@ -40,7 +40,7 @@ Expected equality of these values:
     Which is: "\xD8\xB1\xD9\x83\xD9\x81\xD8\xA7\xD9\x84"
     As Text: ""]]></failure>
     </testcase>
-    <testcase name="DoesOutputBoxcharsInReadingOrder" status="run" result="completed" time="0,053" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesOutputBoxcharsInReadingOrder" status="run" result="completed" time="0.013" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:255&#x0A;Expected equality of these values:&#x0A;  boxchars.size()&#x0A;    Which is: 1&#x0A;  strlen(kEnglishWord)&#x0A;    Which is: 6" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:255
 Expected equality of these values:
   boxchars.size()
@@ -54,10 +54,10 @@ Expected: (FindBoxCharXCoord(boxchars, "1")) < (FindBoxCharXCoord(boxchars, "2")
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:267&#x0A;Expected: (FindBoxCharXCoord(boxchars, &quot;&quot;)) &gt; (FindBoxCharXCoord(boxchars, &quot;&quot;)), actual: 2147483647 vs 2147483647" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:267
 Expected: (FindBoxCharXCoord(boxchars, "")) > (FindBoxCharXCoord(boxchars, "")), actual: 2147483647 vs 2147483647]]></failure>
     </testcase>
-    <testcase name="DoesRenderVerticalText" status="run" result="completed" time="0,003" timestamp="2021-01-03T14:22:45" classname="StringRendererTest" />
-    <testcase name="DoesKeepAllImageBoxes" status="run" result="completed" time="0,007" timestamp="2021-01-03T14:22:45" classname="StringRendererTest" />
-    <testcase name="DoesClearBoxes" status="run" result="completed" time="0,011" timestamp="2021-01-03T14:22:45" classname="StringRendererTest" />
-    <testcase name="DoesLigatureTextForRendering" status="run" result="completed" time="0,032" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRenderVerticalText" status="run" result="completed" time="0.002" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesKeepAllImageBoxes" status="run" result="completed" time="0.004" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesClearBoxes" status="run" result="completed" time="0.004" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesLigatureTextForRendering" status="run" result="completed" time="0.004" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:332&#x0A;Expected equality of these values:&#x0A;  strlen(kEngNonLigatureText) - 1&#x0A;    Which is: 7&#x0A;  renderer_-&gt;GetBoxes().size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:332
 Expected equality of these values:
   strlen(kEngNonLigatureText) - 1
@@ -72,7 +72,7 @@ Expected equality of these values:
   renderer_->GetBoxes()[0]->ch().c_str()
     Which is: " "]]></failure>
     </testcase>
-    <testcase name="DoesRetainInputLigatureForRendering" status="run" result="completed" time="0,032" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRetainInputLigatureForRendering" status="run" result="completed" time="0.004" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:345&#x0A;Expected equality of these values:&#x0A;  strlen(kEngNonLigatureText) - 1&#x0A;    Which is: 7&#x0A;  renderer_-&gt;GetBoxes().size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:345
 Expected equality of these values:
   strlen(kEngNonLigatureText) - 1
@@ -87,14 +87,14 @@ Expected equality of these values:
   renderer_->GetBoxes()[0]->ch().c_str()
     Which is: " "]]></failure>
     </testcase>
-    <testcase name="DoesStripUnrenderableWords" status="run" result="completed" time="0,012" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesStripUnrenderableWords" status="run" result="completed" time="0.002" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:356&#x0A;Expected equality of these values:&#x0A;  &quot; 123  abc&quot;&#x0A;  text&#x0A;    Which is: &quot;   &quot;" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:356
 Expected equality of these values:
   " 123  abc"
   text
     Which is: "   "]]></failure>
     </testcase>
-    <testcase name="DoesRenderWordBoxes" status="run" result="completed" time="0,025" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRenderWordBoxes" status="run" result="completed" time="0.005" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:372&#x0A;Expected equality of these values:&#x0A;  kExpectedNumBoxes&#x0A;    Which is: 17&#x0A;  boxchars.size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:372
 Expected equality of these values:
   kExpectedNumBoxes
@@ -108,7 +108,7 @@ Expected equality of these values:
   boxchars[i]->ch()
     Which is: " "]]></failure>
     </testcase>
-    <testcase name="DoesRenderWordBoxesFromMultiLineText" status="run" result="completed" time="0,035" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRenderWordBoxesFromMultiLineText" status="run" result="completed" time="0.004" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:397&#x0A;Expected equality of these values:&#x0A;  kExpectedNumBoxes&#x0A;    Which is: 17&#x0A;  boxchars.size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:397
 Expected equality of these values:
   kExpectedNumBoxes
@@ -122,8 +122,8 @@ Expected equality of these values:
   boxchars[i]->ch()
     Which is: " "]]></failure>
     </testcase>
-    <testcase name="DoesRenderAllFontsToImage" status="run" result="completed" time="0,005" timestamp="2021-01-03T14:22:45" classname="StringRendererTest" />
-    <testcase name="DoesNotRenderWordJoiner" status="run" result="completed" time="0,019" timestamp="2021-01-03T14:22:45" classname="StringRendererTest">
+    <testcase name="DoesRenderAllFontsToImage" status="run" result="completed" time="0.002" timestamp="2021-01-03T14:23:37" classname="StringRendererTest" />
+    <testcase name="DoesNotRenderWordJoiner" status="run" result="completed" time="0.006" timestamp="2021-01-03T14:23:37" classname="StringRendererTest">
       <failure message="D:\dev\tesseract\unittest\stringrenderer_test.cc:435&#x0A;Expected equality of these values:&#x0A;  word.length()&#x0A;    Which is: 14&#x0A;  boxchars.size()&#x0A;    Which is: 1" type=""><![CDATA[D:\dev\tesseract\unittest\stringrenderer_test.cc:435
 Expected equality of these values:
   word.length()
@@ -133,16 +133,16 @@ Expected equality of these values:
     </testcase>
     <testcase name="DISABLED_DoesDropUncoveredChars" status="notrun" result="suppressed" time="0" timestamp="1970-01-01T03:00:00" classname="StringRendererTest" />
   </testsuite>
-  <testsuite name="ConvertBasicLatinToFullwidthLatinTest" tests="4" failures="0" disabled="0" errors="0" time="0,034" timestamp="2021-01-03T14:22:45">
-    <testcase name="DoesConvertBasicLatin" status="run" result="completed" time="0,001" timestamp="2021-01-03T14:22:45" classname="ConvertBasicLatinToFullwidthLatinTest" />
-    <testcase name="DoesNotConvertFullwidthLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertBasicLatinToFullwidthLatinTest" />
-    <testcase name="DoesNotConvertNonLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertBasicLatinToFullwidthLatinTest" />
-    <testcase name="DoesNotConvertSpace" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertBasicLatinToFullwidthLatinTest" />
+  <testsuite name="ConvertBasicLatinToFullwidthLatinTest" tests="4" failures="0" disabled="0" errors="0" time="0.008" timestamp="2021-01-03T14:23:37">
+    <testcase name="DoesConvertBasicLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertBasicLatinToFullwidthLatinTest" />
+    <testcase name="DoesNotConvertFullwidthLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertBasicLatinToFullwidthLatinTest" />
+    <testcase name="DoesNotConvertNonLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertBasicLatinToFullwidthLatinTest" />
+    <testcase name="DoesNotConvertSpace" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertBasicLatinToFullwidthLatinTest" />
   </testsuite>
-  <testsuite name="ConvertFullwidthLatinToBasicLatinTest" tests="4" failures="0" disabled="0" errors="0" time="0,109" timestamp="2021-01-03T14:22:45">
-    <testcase name="DoesConvertFullwidthLatin" status="run" result="completed" time="0,053" timestamp="2021-01-03T14:22:45" classname="ConvertFullwidthLatinToBasicLatinTest" />
-    <testcase name="DoesNotConvertBasicLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertFullwidthLatinToBasicLatinTest" />
-    <testcase name="DoesNotConvertNonLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertFullwidthLatinToBasicLatinTest" />
-    <testcase name="DoesNotConvertSpace" status="run" result="completed" time="0" timestamp="2021-01-03T14:22:45" classname="ConvertFullwidthLatinToBasicLatinTest" />
+  <testsuite name="ConvertFullwidthLatinToBasicLatinTest" tests="4" failures="0" disabled="0" errors="0" time="0.065" timestamp="2021-01-03T14:23:37">
+    <testcase name="DoesConvertFullwidthLatin" status="run" result="completed" time="0.051" timestamp="2021-01-03T14:23:37" classname="ConvertFullwidthLatinToBasicLatinTest" />
+    <testcase name="DoesNotConvertBasicLatin" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertFullwidthLatinToBasicLatinTest" />
+    <testcase name="DoesNotConvertNonLatin" status="run" result="completed" time="0.001" timestamp="2021-01-03T14:23:37" classname="ConvertFullwidthLatinToBasicLatinTest" />
+    <testcase name="DoesNotConvertSpace" status="run" result="completed" time="0" timestamp="2021-01-03T14:23:37" classname="ConvertFullwidthLatinToBasicLatinTest" />
   </testsuite>
 </testsuites>
