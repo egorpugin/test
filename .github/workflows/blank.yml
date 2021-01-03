@@ -43,7 +43,7 @@ jobs:
         if: always()
         uses: mikepenz/action-junit-report@v1
         with:
-          check_name: Test Report ${{ matrix.os }}
+          check_name: Test Report (${{ matrix.os }})
           report_paths: results.xml
           github_token: ${{ secrets.GITHUB_TOKEN }}
                               
