@@ -16,6 +16,4 @@ jobs:
 
     - name: build
       run: ./sw -static build
-        
-
-
+      
