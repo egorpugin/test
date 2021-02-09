@@ -1,0 +1,25 @@
+name: sw
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-20.04, macOS-latest]
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: egorpugin/sw-action@master
+
+    - name: Cache Sw Data
+      id: cache-sw
+      uses: actions/cache@v2
+      with:
+        path: ~/.sw
+        key: ${{ runner.os }}-sw
+    - name: build
+      run: ./sw -static build
+        
