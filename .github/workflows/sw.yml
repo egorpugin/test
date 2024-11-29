@@ -2,42 +2,14 @@ name: sw
 
 on:
   push:
-  pull_request:
-  schedule:
-    # every day
-    - cron: 0 0 * * *
 
 jobs:
-  windows:
-    runs-on: windows-2022    
-    steps:
-    - uses: actions/checkout@v1
-    - uses: egorpugin/sw-action@master
-    - run: ./sw build
-
-  linux:
-    runs-on: ubuntu-22.04
-    container: fedora:latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: prepare
-      run: |
-        sudo dnf -y update
-        sudo dnf -y install flex bison cmake which gcc clang clang-tools-extra lld git \
-          mesa-libGL-devel mesa-libEGL-devel
-    - uses: egorpugin/sw-action@master
-    - run: ./sw build -compiler gcc
-
   macos:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
     - uses: egorpugin/sw-action@master
-    - name: install
-      run: |
-        brew update
-        brew install flex bison gcc llvm m4
-    - run: sudo xcode-select --switch /Library/Developer/CommandLineTools
+    #- run: sudo xcode-select --switch /Library/Developer/CommandLineTools
     - name: build
       run: |
         export PATH="/opt/homebrew/opt/m4/bin:$PATH"
