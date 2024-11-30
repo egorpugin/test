@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: egorpugin/sw-action@master
-    #- run: sudo xcode-select --switch /Library/Developer/CommandLineTools
+    - run: sudo xcode-select --switch /Library/Developer/CommandLineTools
     - run: ./sw --version
     - name: build
       run: |
