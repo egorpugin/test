@@ -23,5 +23,5 @@ jobs:
         export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
         export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
         #./sw build -compiler gcc-14 -sfc
-        ./sw build -compiler clang --trace -j 1
+        ./sw build -compiler gcc --trace -j 1
         
