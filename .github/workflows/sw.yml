@@ -9,6 +9,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: egorpugin/sw-action@master
+    - name: install
+      run: |
+        brew update
+        brew install flex bison gcc llvm m4
     #- run: sudo xcode-select --switch /Library/Developer/CommandLineTools
     - run: ./sw --version
     - name: build
